@@ -1,0 +1,15 @@
+<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:aw="clr-namespace:WPFOfficeTheme"
+	>
+	
+	<SolidColorBrush x:Key="ForegroundColorBrush"
+		Color="{x:Static aw:StatusBarStylePallet.ForegroundColorBrush}"/>
+    
+	<Style TargetType="StatusBar">
+		<Setter Property="Foreground" Value="{StaticResource ForegroundColorBrush}"/>
+		<Setter Property="Background" Value="Transparent" />
+	</Style>
+	
+</ResourceDictionary>

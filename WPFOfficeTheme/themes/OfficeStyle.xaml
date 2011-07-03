@@ -1,0 +1,54 @@
+<ResourceDictionary
+	x:Class="WPFOfficeTheme.OfficeStyle"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:aw="clr-namespace:WPFOfficeTheme"
+>
+	
+	<ResourceDictionary.MergedDictionaries>
+
+
+        <ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/Controls/ImageButtonDefaultStyle.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/Controls/HeaderedPanelDefaultStyle.xaml"/>
+        
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/ResizeGripStyle.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/StatusBarStyle.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/ComboBox.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/ScrollBar.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/Button.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/TextBox.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/CheckBox.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/GroupBox.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/GroupBox.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/ListBox.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/ListBoxItem.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/ProgressBar.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/ScrollViewer.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/RadioButton.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/Slider.xaml"/>
+
+        <ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/GridSplitter.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/Expander_new.xaml" />
+        <!--
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/Expander.xaml"/>
+		 -->
+        <ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/DataGrid.xaml"/>
+        
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/TabControl.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/ListView.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/TextBlockStyle.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/themes/DatePicker.xaml" />
+
+    </ResourceDictionary.MergedDictionaries>
+	
+	<SolidColorBrush x:Key="DefaultWorkspaceAdorner1BackgroundBrush" Color="{x:Static aw:OfficeColors+Background.OfficeColor8}" />
+	<SolidColorBrush x:Key="DefaultWorkspaceAdorner1StrokeBrush" Color="{x:Static aw:OfficeColors+Background.OfficeColor9}" />
+	<SolidColorBrush x:Key="DefaultWorkspaceAdorner2BackgroundBrush" Color="{x:Static aw:OfficeColors+Background.OfficeColor10}" />
+	
+	<LinearGradientBrush x:Key="DefaultWorkspaceBackgroundBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+		<GradientStop Offset="0" Color="{x:Static aw:OfficeColors+Background.OfficeColor5}" />
+		<GradientStop Offset="0.7" Color="{x:Static aw:OfficeColors+Background.OfficeColor6}" />
+		<GradientStop Offset="1" Color="{x:Static aw:OfficeColors+Background.OfficeColor7}" />
+	</LinearGradientBrush>
+
+</ResourceDictionary>

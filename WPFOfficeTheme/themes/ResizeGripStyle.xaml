@@ -1,0 +1,38 @@
+<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:aw="clr-namespace:WPFOfficeTheme"
+	>
+
+	<SolidColorBrush x:Key="ResizeGripDarkBrush" Color="{x:Static aw:ResizeGripStylePallet.ResizeGripDark}" />
+	<SolidColorBrush x:Key="ResizeGripLightBrush" Color="{x:Static aw:ResizeGripStylePallet.ResizeGripLight}" />
+	
+	<Style TargetType="ResizeGrip">
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="ResizeGrip">
+					<Grid SnapsToDevicePixels="True" Background="{TemplateBinding Background}">
+						<Path HorizontalAlignment="Right" VerticalAlignment="Bottom"
+							Margin="0,0,2,2" Data="M 8,0 L 11,0 L 11,11 L 0,11 L 0,8 L 3,8 L 4,4 L 8,4 L 8,0 z">
+							<Path.Fill>
+								<DrawingBrush Viewbox="0,0,4,4" Viewport="0,0,4,4" TileMode="Tile"
+									ViewportUnits="Absolute" ViewboxUnits="Absolute">
+									<DrawingBrush.Drawing>
+										<DrawingGroup>
+											<GeometryDrawing Brush="{StaticResource ResizeGripLightBrush}"
+												Geometry="M 1,1 L 3,1 L 3,3 L 1,3 z "/>
+											<GeometryDrawing Brush="{StaticResource ResizeGripDarkBrush}"
+												Geometry="M 0,0 L 2,0 L 2,2 L 0,2 z "/>
+										</DrawingGroup>
+									</DrawingBrush.Drawing>
+								</DrawingBrush>
+							</Path.Fill>
+						</Path>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	
+</ResourceDictionary>

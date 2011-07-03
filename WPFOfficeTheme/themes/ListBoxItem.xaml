@@ -1,0 +1,48 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:awc="clr-namespace:WPFOfficeTheme"
+    xmlns:aw="clr-namespace:WPFOfficeTheme"
+	>
+
+    
+    <SolidColorBrush x:Key="DisabledForegroundBrush" Color="{x:Static aw:ListBoxItemPallet.DisabledForeground}" />
+    
+    <SolidColorBrush x:Key="SelectedBorderBrush" Color="{x:Static aw:ListBoxItemPallet.SelectedBorder}" />
+           
+    <LinearGradientBrush x:Key="SelectedBackgroundBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+		<GradientStop Offset="0" Color="{x:Static aw:ListBoxItemPallet.SelectedBackground1}" />
+		<GradientStop Offset="0.4" Color="{x:Static aw:ListBoxItemPallet.SelectedBackground2}" />
+		<GradientStop Offset="0.4" Color="{x:Static aw:ListBoxItemPallet.SelectedBackground3}" />
+		<GradientStop Offset="1" Color="{x:Static aw:ListBoxItemPallet.SelectedBackground4}" />
+	</LinearGradientBrush>
+    
+    <Style x:Key="{x:Type ListBoxItem}" TargetType="ListBoxItem">
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <Border
+                      Name="Border"
+                      BorderThickness="1"
+                      CornerRadius="2"
+                      Padding="2"
+                      SnapsToDevicePixels="True">
+                        <ContentPresenter />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="true">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource SelectedBackgroundBrush}"/>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource SelectedBorderBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="{StaticResource DisabledForegroundBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

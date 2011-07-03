@@ -1,0 +1,10 @@
+<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	>
+	<ResourceDictionary.MergedDictionaries>				
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/Controls/ImageButtonDefaultStyle.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/Controls/HeaderedPanelDefaultStyle.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/WPFOfficeTheme;component/Controls/SearchableComboBoxDefaultStyle.xaml"/>
+	</ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
